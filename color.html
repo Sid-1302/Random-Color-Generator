@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random color generator</title>
+    <style>
+        h1 {
+            font-family:cursive; 
+            font-size: 4rem;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            border-radius: 10cm;
+            margin-bottom: 20%;
+        }
+
+        button {
+            position: absolute;
+            left: 46%;
+            padding: 2%;
+            font-size: larger;
+            border-radius: 20%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Random Color Generator</h1>
+    <button>Click Me</button>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        var r = Math.floor(Math.random() * 255) + 1;
+        var g = Math.floor(Math.random() * 255) + 1;
+        var b = Math.floor(Math.random() * 255) + 1;
+        var color = 'rgb(' + r + ',' + g + ',' + b + ')';
+        $('body').css('backgroundColor', color);
+        $('button').on('click', function () {
+            window.location.reload();
+        })
+
+    </script>
+</body>
+
+</html>
